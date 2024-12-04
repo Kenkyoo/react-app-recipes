@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# React App Recipes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación de recetas creada con React, diseñada para buscar, explorar y visualizar recetas culinarias. La app permite realizar búsquedas avanzadas, mostrar resultados y obtener detalles como instrucciones e ingredientes de las recetas seleccionadas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Búsqueda Avanzada:** Busca recetas utilizando diferentes opciones y filtros.
+- **Resultados Dinámicos:** Muestra una lista interactiva de resultados.
+- **Detalles de Recetas:** Visualiza instrucciones y lista de ingredientes al seleccionar una receta.
+- **Diseño Moderno:** Interfaz creada con TailwindCSS y DaisyUI para una experiencia visual atractiva.
+- **Animaciones:** Efectos visuales mediante framer-motion.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend:**
+  - React
+  - TailwindCSS
+  - DaisyUI
+- **Animaciones:**
+  - framer-motion
+- **HTTP Requests:**
+  - Axios
+- **Compilador y Herramientas:**
+  - Vite
+  - Sass
 
-- Configure the top-level `parserOptions` property like this:
+## Scripts Disponibles
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+En el directorio del proyecto, puedes ejecutar los siguientes comandos:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run build`: Compila la aplicación para producción.
+- `npm run lint`: Verifica el código con ESLint.
+- `npm run preview`: Previsualiza la aplicación compilada.
+- `npm run build:css`: Compila los estilos con TailwindCSS.
+- `npm run watch:css`: Compila y observa los cambios en los estilos con TailwindCSS.
+- `npm run watch:sass`: Observa y compila cambios en los estilos usando Sass.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Instalación
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/Kenkyoo/react-app-recipes.git
+   cd react-app-recipes
+
+    Instala las dependencias:
+
+npm install
+
+Inicia el servidor de desarrollo:
+
+    npm run dev
+
+Estructura del Proyecto
+
+src/
+├── components/    # Componentes reutilizables
+├── pages/         # Páginas principales de la app
+├── css/           # Estilos (Sass y TailwindCSS)
+├── utils/         # Utilidades y helpers
+└── assets/        # Recursos estáticos (imágenes, íconos)
+
+Contribuir
+
+¡Las contribuciones son bienvenidas! Si tienes sugerencias o mejoras, no dudes en abrir un issue o enviar un pull request.
+Licencia
+
+Este proyecto está bajo la licencia MIT.
